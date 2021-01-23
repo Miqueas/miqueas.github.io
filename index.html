@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!-- Head -->
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta name="viewport" content="width=device-width" />
+
+  <!-- Halfmoon CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css"
+  />
+  <!-- End Halfmoon CSS -->
+</head>
+<!-- End Head -->
+
+<!-- Body -->
+<body data-set-preferred-mode-onload="true">
+  <div class="d-flex justify-content-center">
+    <div class="w-half mw-full">
+      <div class="card text-center">
+        <h1 class="card-title font-size-24">
+          Coming soon
+        </h1>
+        <p>
+          This website is under construction.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Halfmoon JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+  <script type="text/javascript">
+    let dark_mode_class = document.body.classList.contains("dark-mode");
+    let preferred_mode = halfmoon.getPreferredMode();
+
+    function setTheme(mode) {
+      if (mode == "light") {
+        document.body.classList.remove("dark-mode");
+        halfmoon.darkModeOn = false;
+        halfmoon.createCookie("halfmoon_preferredMode", "light-mode", 365);
+      }
+
+      else if (mode == "dark") {
+        document.body.classList.add("dark-mode");
+        halfmoon.darkModeOn = true;
+        halfmoon.createCookie("halfmoon_preferredMode", "dark-mode", 365);
+      }
+
+      else {
+        console.log("Bad theme mode: " + mode);
+      }
+    }
+
+    if (preferred_mode == "light-mode" && dark_mode_class) {
+      setTheme("light");
+    }
+
+    else if ((preferred_mode == "dark-mode" || preferred_mode == "not-set") && !dark_mode_class) {
+      setTheme("dark");
+    }
+
+    else {
+      console.log("Nothing to do.");
+    }
+  </script>
+</body>
+<!-- End Body -->
+
+</html>
