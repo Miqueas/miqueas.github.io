@@ -16,60 +16,60 @@
     href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css"
   />
   <!-- End Halfmoon CSS -->
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/js/all.min.js"></script>
+  <!-- End Font Awesome JS -->
 </head>
 <!-- End Head -->
 
 <!-- Body -->
-<body data-set-preferred-mode-onload="true">
-  <div class="d-flex justify-content-center">
-    <div class="w-half mw-full">
-      <div class="card text-center">
-        <h1 class="card-title font-size-24">
-          Coming soon
-        </h1>
-        <p>
-          This website is under construction.
-        </p>
+<body
+  class="with-custom-webkit-scrollbars with-custom-css-scrollbars"
+  data-dm-shortcut-enabled="true"
+  data-set-preferred-mode-onload="true"
+>
+  <!-- Page wrapper -->
+  <div class="page-wrapper with-navbar">
+
+    <!-- Sticky alerts (toasts), empty container -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+    <div class="sticky-alerts"></div>
+    <!-- End Sticky alerts (toasts), empty container -->
+
+    <!-- Navbar -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
+    <nav id="Navbar" class="navbar shadow-sm bg-light">
+      <div class="navbar-content ml-auto">
+        <button id="ToggleThemeBtn" class="btn btn-primary" type="button">
+          <i class="fas fa-moon mr-md-5"></i>
+          <span class="d-sm-none d-md-inline">Toggle dark mode</span>
+        </button>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Content wrapper start -->
+    <div class="content-wrapper">
+      <div id="App" class="content">
+        <vue-markdown :source="Readme"></vue-markdown>
       </div>
     </div>
+    <!-- End Content wrapper start -->
+
   </div>
+  <!-- End Page wrapper -->
 
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <!-- Markdown integration with Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@adapttive/vue-markdown@3.0.3/dist/vue-markdown.js"></script>
   <!-- Halfmoon JS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
-  <script type="text/javascript">
-    let dark_mode_class = document.body.classList.contains("dark-mode");
-    let preferred_mode = halfmoon.getPreferredMode();
+  <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
 
-    function setTheme(mode) {
-      if (mode == "light") {
-        document.body.classList.remove("dark-mode");
-        halfmoon.darkModeOn = false;
-        halfmoon.createCookie("halfmoon_preferredMode", "light-mode", 365);
-      }
-
-      else if (mode == "dark") {
-        document.body.classList.add("dark-mode");
-        halfmoon.darkModeOn = true;
-        halfmoon.createCookie("halfmoon_preferredMode", "dark-mode", 365);
-      }
-
-      else {
-        console.log("Bad theme mode: " + mode);
-      }
-    }
-
-    if (preferred_mode == "light-mode" && dark_mode_class) {
-      setTheme("light");
-    }
-
-    else if ((preferred_mode == "dark-mode" || preferred_mode == "not-set") && !dark_mode_class) {
-      setTheme("dark");
-    }
-
-    else {
-      console.log("Nothing to do.");
-    }
-  </script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+  <script src="js/settings.js"></script>
 </body>
 <!-- End Body -->
 
