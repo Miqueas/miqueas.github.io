@@ -1,0 +1,22 @@
+{
+  "name": "m1que4s.github.io",
+  "version": "0.1.0",
+  "description": "My github pages 🤔",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx pug -o Static/ Source/index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M1que4s/M1que4s.github.io.git"
+  },
+  "author": "Miqueas Martinez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M1que4s/M1que4s.github.io/issues"
+  },
+  "homepage": "https://github.com/M1que4s/M1que4s.github.io#readme",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
