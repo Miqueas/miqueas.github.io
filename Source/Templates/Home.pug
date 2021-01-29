@@ -1,0 +1,65 @@
+block Home
+  .column
+    .container
+
+      // "Hero" banner
+      .hero.is-full
+        .hero__content.grid.is-vertical.is-vertically-centered.has-text-center
+          .column.is-full
+            h1 Hello,
+
+          .column.is-11.is-desktop-9.is-desktop-x-8.
+            and welcome to my website. I'm a young and passionate Lua developer, GTK fan and (Arch) Linux user from Venezuela. Check out (a bit) more about me and my projects.
+
+        .hero__footer
+          .Arrow-Track
+            .Arrow-Container.has-text-center
+              small(style="display: block;") Scroll down
+              i.fas.fa-arrow-down
+
+      // "About me" section
+      .hero
+        .hero__content.grid.has-centered
+          .column.is-full.is-desktop-three-quarters
+            h2 About me
+
+            p I am a Venezuelan passionate about programming in Lua. I'm pretty new in the programming world, since I just started getting into it approximately in 2016, starting with web stuff like HTML and CSS, then I went through C and now I'm in Lua. Honestly, there are a lot of things I don't know yet, but eventually plan to learn about it.
+
+            p I've known about GTK since I knew C and just loved it and although at the time I didn't understand exactly how it worked, today it's getting a little easier for me to understand and use it.
+
+            p I've also been a Linux user for a while now (since 2011 or 2012 approximately), one of the distributions that caught my attention back then was Arch, but I couldn't use it until early 2020 since I had no idea how to install it on my laptop, so I just left it "for when I have more experience" (in the end someone helped me, I'm still a Linux newbie, lmao).
+
+            p I am currently living in Colombia and here I have been able to work on small personal projects.
+
+      // "Portfolio"
+      .hero
+        .hero__content.grid.has-centered
+          .column.is-11
+            h2 Projects
+            p Please, note that not all projects are finished.
+
+          .column.is-11.grid
+            .column.is-mobile-half.is-6
+              h4 Moonplayer
+              p GTK music player written in Lua
+              a(href="https://github.com/M1que4s/Moonplayer") Source code
+
+            .column.is-mobile-half.is-6
+              h4 Logger
+              p Small, simple and easy to use log utility for Lua
+              a(href="https://github.com/M1que4s/Logger") Source code
+
+            .column.is-mobile-half.is-6
+              h4 Self
+              p Simple and compact OOP library for Lua
+              a(href="https://github.com/M1que4s/Self") Source code
+
+            .column.is-mobile-half.is-6
+              h4 TermColors
+              p Small library for handle colored output with Lua using markup syntax.
+              a(href="https://github.com/M1que4s/TermColors") Source code
+
+            .column.is-mobile-half.is-6
+              h4 GML
+              p CSS-like language for GTK templates
+              a(href="https://github.com/M1que4s/GML") Source code

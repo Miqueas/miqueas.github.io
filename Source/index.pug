@@ -1,0 +1,19 @@
+html(lang="en")
+  head
+    include Templates/Head
+
+  body
+    // Mobile navigation bar
+    include Templates/Nav
+
+    // Wrapper
+    .grid.has-no-col-padding
+      // Sidebar
+      include Templates/Sidebar
+
+      .column.is-shrink.has-no-padding.is-desktop-up(style="width: 250px;")
+
+      // Content
+      include Templates/Home
+
+    include Templates/Scripts

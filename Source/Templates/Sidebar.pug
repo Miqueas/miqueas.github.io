@@ -1,0 +1,33 @@
+block Sidebar
+  .column.is-shrink.is-desktop-up(
+    style="width: 250px; position: fixed;"
+  )
+    .card.has-no-shadow(style="height: 100vh;")
+      .card__content.grid.is-vertical
+        // Profile image
+        .column.is-shrink(style="margin-right: auto; margin-left: auto;")
+          .image.is-square.is-rounded
+            img(
+              src="Brand.png"
+              width="100%"
+              height="100%"
+              style="border-radius: 50%;"
+            ).has-bg-light
+
+        // Nav links
+        .column.grid.has-no-padding-top.has-no-padding-left.has-no-padding-right.is-vertical
+          .column.is-full: h4 Miqueas Martinez
+
+          .column.is-full
+            ul.has-no-list-style.has-link-inherit
+              li: a(href="/") Home
+              li.has-text-muted Blog (coming soon)
+              //li: a(href="/contact") Contact
+
+        .card__footer.grid
+          .column.is-full
+            ul.is-inline-list
+              li: a(href="https://t.me/Miqueas20").fab.fa-telegram-plane
+              li: a(href="https://mas.to/@M1que4s").fab.fa-mastodon
+          .column.is-full.has-no-padding-top
+            small.has-text-muted &copy; 2021 Miqueas Martinez
