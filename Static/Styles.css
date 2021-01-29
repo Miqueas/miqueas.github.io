@@ -1,0 +1,33 @@
+.hero:not(:last-of-type), .top {
+  border-bottom: 1.5px solid rgba(219,219,219,.36);
+}
+
+.Arrow-Track {
+  height: 60px;
+  margin: 0 auto 10px auto;
+  width: 200px;
+}
+
+.Arrow-Container {
+  height: 20px;
+  width: 200px;
+  -webkit-animation: ArrowDownUp 3s infinite;
+  animation: ArrowDownUp 3s infinite;
+}
+
+.Arrow-Container, .Arrow-Container > * {
+  margin: auto;
+  position: relative;
+}
+
+@-webkit-keyframes ArrowDownUp {
+  0% {top: 0px;}
+  50% {top: 18px;}
+  100% {top: 0px;}
+}
+
+@keyframes ArrowDownUp {
+  0% {top: 0px;}
+  50% {top: 18px;}
+  100% {top: 0px;}
+}
