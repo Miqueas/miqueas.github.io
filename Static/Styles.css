@@ -31,3 +31,7 @@
   50% {top: 18px;}
   100% {top: 0px;}
 }
+
+.Gradient {
+  background-image: linear-gradient(140deg, #495aff, #4e4376);
+}

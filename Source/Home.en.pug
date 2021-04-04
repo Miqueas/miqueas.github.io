@@ -1,16 +1,15 @@
 block Home
   .container
-
     // "Hero" banner
-    .hero.is-full
+    .hero.is-full.has-text-white.Gradient
       .hero__content.grid.is-vertical.is-vertically-centered.has-text-center
         .column.is-full
           h1 Hello
 
-        .column.is-11.is-desktop-9.is-desktop-x-8.
+        .column.is-10.is-desktop-9.is-desktop-x-8.
           Welcome to my website. I'm a young developer passionate about Lua, GTK fan and (Arch) Linux user. Check out (a bit) more about me and my projects.
 
-      .hero__footer
+      .hero__footer.is-desktop-up
         .Arrow-Track
           .Arrow-Container.has-text-center
             small(style="display: block;") Scroll down
@@ -33,37 +32,130 @@ block Home
     // "Portfolio"
     .hero
       .hero__content.grid.has-centered
-        .column.is-11
+        .column.is-10
           h2 Projects
           p Please, note that not all projects are finished.
 
-        .column.is-11.grid
-          .column.is-mobile-half.is-6
-            h4 Moonplayer
-            p [WIP] Gtk music player written in pure Lua
-            a(href="https://github.com/Miqueas/Moonplayer") Source code
+        // Visible on mobiles only
+        .column.is-10.grid.is-mobile-only
+          .column.is-full
+            .panel.has-text-white.Gradient
+              .media__content
+                h4 Moonplayer
+                p [WIP] Gtk music player written in pure Lua
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Moonplayer" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
 
-          .column.is-mobile-half.is-6
-            h4 Logit
-            p Small, simple and easy to use log utility for Lua
-            a(href="https://github.com/Miqueas/Logit") Source code
+          .column.is-full
+            .panel.has-bg-black.has-text-white
+              .media__content
+                h4 Logit
+                p Small, simple and easy to use log utility for Lua
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Logit" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
 
-          .column.is-mobile-half.is-6
-            h4 Self
-            p Simple and compact OOP library for Lua
-            a(href="https://github.com/Miqueas/Self") Source code
+          .column.is-full
+            .panel.has-text-white.Gradient
+              .media__content
+                h4 Self
+                p Simple and compact OOP library for Lua
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Self" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
 
-          .column.is-mobile-half.is-6
-            h4 Static
-            p Basic support for static typing in Lua
-            a(href="https://github.com/Miqueas/Static") Source code
+          .column.is-full
+            .panel.has-bg-black.has-text-white
+              .media__content
+                h4 Static
+                p Basic support for static typing in Lua
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Static" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
 
-          .column.is-mobile-half.is-6
-            h4 Github-REST-API-Example
-            p Basic example of the Github REST API in various languages
-            a(href="https://github.com/Miqueas/Github-REST-API-Example") Source code
+          .column.is-full
+            .panel.has-text-white.Gradient
+              .media__content
+                h4 Github-REST-API-Example
+                p Basic example of the Github REST API in various languages
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Github-REST-API-Example" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
 
-          .column.is-mobile-half.is-6
-            h4 TermColors
-            p Colorize your Lua script output with a easy to use markup
-            a(href="https://github.com/Miqueas/TermColors") Source code
+          .column.is-full
+            .panel.has-bg-black.has-text-white
+              .media__content
+                h4 TermColors
+                p Colorize your Lua script output with a easy to use markup
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/TermColors" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
+
+        // Visible on tablets and upper
+        .column.is-10.grid.is-tablet-up
+          .column.is-6
+            .panel.has-text-white.Gradient
+              .media__content
+                h4 Moonplayer
+                p [WIP] Gtk music player written in pure Lua
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Moonplayer" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
+
+          .column.is-6
+            .panel.has-bg-black.has-text-white
+              .media__content
+                h4 Logit
+                p Small, simple and easy to use log utility for Lua
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Logit" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
+
+          .column.is-6
+            .panel.has-bg-black.has-text-white
+              .media__content
+                h4 Self
+                p Simple and compact OOP library for Lua
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Self" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
+
+          .column.is-6
+            .panel.has-text-white.Gradient
+              .media__content
+                h4 Static
+                p Basic support for static typing in Lua
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Static" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
+
+          .column.is-6
+            .panel.has-text-white.Gradient
+              .media__content
+                h4 Github-REST-API-Example
+                p Basic example of the Github REST API in various languages
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/Github-REST-API-Example" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt
+
+          .column.is-6
+            .panel.has-bg-black.has-text-white
+              .media__content
+                h4 TermColors
+                p Colorize your Lua script output with a easy to use markup
+                button.button.is-rounded.is-white
+                  span
+                    a(href="https://github.com/Miqueas/TermColors" target="_blank").has-text-black Source code
+                  span.icon: i.fas.fa-external-link-alt

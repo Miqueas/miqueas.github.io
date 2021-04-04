@@ -18,6 +18,6 @@
   "homepage": "https://github.com/Miqueas/Miqueas.github.io#readme",
   "dependencies": {
     "pug": "^2.0.4",
-    "pug-cli": "*"
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
