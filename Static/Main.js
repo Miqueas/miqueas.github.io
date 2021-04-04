@@ -1,13 +1,19 @@
+let app = document.getElementById("app");
 const Raw = "https://raw.githubusercontent.com/Miqueas/Miqueas.github.io/master/";
 
-var app = new Vue({
-  el: "#app",
-  data: {
-    content: await fetch(Raw + "Source/Home.en.html").text();
-  }
-});
+function home(lang) {
+  fetch(`${Raw}Home.${lang}.html`)
+    .then(res => res.text())
+    .then(data => {
+      let home = new DOMParser().parseFromString(data, "text/html");
+      if (app.firstChild != null) app.removeChild(app.firstChild);
+      app.appendChild(home.body.firstChild);
+    });
+}
 
-var en_btn = document.getElementById("en-btn");
-var es_btn = document.getElementById("es-btn");
-en_btn.addEventListener("click", () => { app.$data = { innerHtml: "en-btn clicked" }; });
-es_btn.addEventListener("click", () => { app.$data = { innerHtml: "es-btn clicked" }; });
+home("en");
+
+let en_btn = document.getElementById("en-btn");
+let es_btn = document.getElementById("es-btn");
+en_btn.addEventListener("click", () => home("en"));
+es_btn.addEventListener("click", () => home("es"));
