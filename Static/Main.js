@@ -15,5 +15,9 @@ home("en");
 
 let en_btn = document.getElementById("en-btn");
 let es_btn = document.getElementById("es-btn");
+let en_btn_mobile = document.getElementById("en-btn-mobile");
+let es_btn_mobile = document.getElementById("es-btn-mobile");
 en_btn.addEventListener("click", () => home("en"));
 es_btn.addEventListener("click", () => home("es"));
+en_btn_mobile.addEventListener("click", () => home("en"));
+es_btn_mobile.addEventListener("click", () => home("es"));

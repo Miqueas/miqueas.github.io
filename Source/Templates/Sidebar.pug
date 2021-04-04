@@ -27,14 +27,17 @@ block Sidebar
         .card__footer.grid
           // Language selection
           .column.is-full
-            ul.is-inline-list
-              li: button#en-btn.button.is-link.is-rounded.has-text-white English
-              li: button#es-btn.button.is-link.is-rounded.has-text-white Español
+            .is-button-group
+              button#en-btn.button.is-link.is-rounded.has-text-white English
+              button#es-btn.button.is-link.is-rounded.has-text-white Español
 
+          // Social
           .column.is-full
             ul.is-inline-list
               li: a(href="https://t.me/M1que4s").fab.fa-telegram-plane
               li: a(href="https://mas.to/@M1que4s").fab.fa-mastodon
               li: a(href="mailto:miqueas2020@yahoo.com").fas.fa-envelope
+
+          // Copyright
           .column.is-full.has-no-padding-top
             small.has-text-muted &copy; 2021 Miqueas Martinez
