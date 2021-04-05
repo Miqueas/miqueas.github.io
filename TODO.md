@@ -1,0 +1,6 @@
+- [ ] Improve english translation
+- [ ] Add the "Services" page
+- [x] Yes
+- [ ] Blog
+- [ ] Add a contact page (or just a section)
+- [ ] Improve translations in tablets and mobile devices
