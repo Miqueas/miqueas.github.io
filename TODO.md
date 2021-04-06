@@ -3,4 +3,4 @@
 - [x] Yes
 - [ ] Blog
 - [ ] Add a contact page (or just a section)
-- [ ] Improve translations in tablets and mobile devices
+- [X] Improve translations in tablets and mobile devices

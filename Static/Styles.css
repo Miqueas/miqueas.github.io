@@ -32,6 +32,10 @@
   100% {top: 0px;}
 }
 
-.Gradient {
-  background-image: linear-gradient(140deg, #495aff, #4e4376);
+.Parallax {
+  background-image: url("Coding-Background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

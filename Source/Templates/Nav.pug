@@ -16,8 +16,21 @@ block Nav
 
     // Language selection
     .is-end
-      //button#mobile-burger.button.is-link.is-rounded.has-text-white
+      button#mobile-burger.button.is-link.is-rounded.has-text-white
         i.fas.fa-bars
-      //.is-button-group
-        button#en-btn-mobile.button.is-link.is-rounded.has-text-white English
-        button#es-btn-mobile.button.is-link.is-rounded.has-text-white Español
+
+  // Mobile menu
+  #mobile-menu.modal.is-full
+    .modal__background
+    .modal__content.has-no-padding
+      .card.has-no-shadow
+        .card__header.grid.has-spacing
+          .column.is-shrink.is-mobile-shrink
+            h4 Menu
+          .column.is-shrink.is-mobile-shrink
+            button#mobile-menu-close-btn.button.is-primary.is-rounded(style="margin:0;")
+              i.fas.fa-times
+        .card__content
+          .is-button-group
+            button#en-btn-mobile.button.is-primary.is-rounded English
+            button#es-btn-mobile.button.is-primary.is-rounded Español
