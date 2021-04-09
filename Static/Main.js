@@ -1,29 +1,36 @@
-let app = document.getElementById("app");
-const Raw = "https://raw.githubusercontent.com/Miqueas/Miqueas.github.io/master/";
+const QueryRE = /((\w+)\=(\w+))+/gi;
 
-function home(lang) {
-  fetch(`${Raw}Home.${lang}.html`)
-    .then(res => res.text())
-    .then(data => {
-      let home = new DOMParser().parseFromString(data, "text/html");
-      while (app.firstChild) { app.removeChild(app.firstChild); }
-      while (home.body.firstChild) { app.appendChild(home.body.firstChild); }
-    });
+const Root = document.getElementById("root");
+var Query;
+
+function GetQuery() {
+  let query = {};
+  while (match = QueryRE.exec(window.location.search))
+    query[match[2]] = match[3];
+  return query;
 }
 
-home("en");
+function Update() {
+  Query = GetQuery();
 
-let en_btn = document.getElementById("en-btn");
-let es_btn = document.getElementById("es-btn");
-let en_btn_mobile = document.getElementById("en-btn-mobile");
-let es_btn_mobile = document.getElementById("es-btn-mobile");
-en_btn.addEventListener("click", () => home("en"));
-es_btn.addEventListener("click", () => home("es"));
-en_btn_mobile.addEventListener("click", () => home("en"));
-es_btn_mobile.addEventListener("click", () => home("es"));
+  if (Query["page"] != undefined) {
+    let page = Query["page"];
+    Router.render(Root, page);
+  } else {
+    Router.render(Root, "home");
+  }
 
-let mobile_burger = document.getElementById("mobile-burger");
-let mobile_menu = document.getElementById("mobile-menu");
-let mobile_menu_close_btn = document.getElementById("mobile-menu-close-btn");
-mobile_burger.addEventListener("click", () => mobile_menu.classList.toggle("is-active"));
-mobile_menu_close_btn.addEventListener("click", () => mobile_menu.classList.toggle("is-active"));
+  if (Query["lang"] != undefined) {
+    Cookies.set("lang", Query["lang"], { expires: 364 });
+    Say.load(Query["lang"]);
+  } else if (Cookies.get('lang') != undefined) {
+    Say.load(Cookies.get('lang'));
+  } else {
+    let lang = Say.load();
+    Cookies.set("lang", lang, { expires: 364 });
+  }
+}
+
+window.onload = Update;
+window.onpopstate = Update;
+// document.onreadystatechange = Update;

@@ -3,15 +3,14 @@ block Home
   .hero.is-full.has-text-white.Parallax
     .hero__content.grid.is-vertical.is-vertically-centered.has-text-center
       .column.is-full
-        h1 Hola
+        h1(say="home_hello")
 
-      .column.is-10.is-desktop-9.is-desktop-x-8.
-        Bienvenido a mi sitio web. Soy un joven desarrollador apasionado por Lua, fan de GTK y usuario de (Arch) Linux. Mira (un poco) más sobre mí y mis proyectos.
+      .column.is-10.is-desktop-9.is-desktop-x-8(say="home_welcome")
 
     .hero__footer.is-desktop-up
       .Arrow-Track
         .Arrow-Container.has-text-center
-          small(style="display: block;")
+          small(style="display: block;" say="home_scroll")
           i.fas.fa-arrow-down
 
   .container
@@ -19,76 +18,76 @@ block Home
     .hero
       .hero__content.grid.has-centered
         .column.is-full.is-desktop-three-quarters
-          h2
-          p
-          p
-          p
-          p
+          h2(say="home_about_title")
+          p(say="home_about_1")
+          p(say="home_about_2")
+          p(say="home_about_3")
+          p(say="home_about_4")
 
     // "Portfolio"
     .hero
       .hero__content.grid.has-centered
         .column.is-10
-          h2 Proyectos
-          p: em
+          h2(say="home_projects_title")
+          p: em(say="home_projects_note")
 
         .column.is-10.grid
           .column.is-6.is-mobile-full
             .panel.has-bg-primary.has-text-white
               .media__content
                 h4 Moonplayer
-                p
+                p(say="home_project_card_1_desc")
                 button.button.is-rounded.is-white
                   span
-                    a(href="https://github.com/Miqueas/Moonplayer" target="_blank").has-text-black Código fuente
+                    a(href="https://github.com/Miqueas/Moonplayer" target="_blank" say="home_project_card_link").has-text-black
                   span.icon: i.fas.fa-external-link-alt
 
           .column.is-6.is-mobile-full
             .panel.has-bg-black.has-text-white
               .media__content
                 h4 Logit
-                p
+                p(say="home_project_card_2_desc")
                 button.button.is-rounded.is-white
                   span
-                    a(href="https://github.com/Miqueas/Logit" target="_blank").has-text-black Código fuente
+                    a(href="https://github.com/Miqueas/Logit" target="_blank" say="home_project_card_link").has-text-black
                   span.icon: i.fas.fa-external-link-alt
 
           .column.is-6.is-mobile-full
             .panel.has-bg-danger.has-text-white
               .media__content
                 h4 Self
-                p
+                p(say="home_project_card_3_desc")
                 button.button.is-rounded.is-white
                   span
-                    a(href="https://github.com/Miqueas/Self" target="_blank").has-text-black Código fuente
+                    a(href="https://github.com/Miqueas/Self" target="_blank" say="home_project_card_link").has-text-black
                   span.icon: i.fas.fa-external-link-alt
 
           .column.is-6.is-mobile-full
             .panel.has-bg-warning.has-text-black
               .media__content
                 h4 Static
-                p
+                p(say="home_project_card_4_desc")
                 button.button.is-rounded.is-white
                   span
-                    a(href="https://github.com/Miqueas/Static" target="_blank").has-text-black Código fuente
+                    a(href="https://github.com/Miqueas/Static" target="_blank" say="home_project_card_link").has-text-black
                   span.icon: i.fas.fa-external-link-alt
 
           .column.is-6.is-mobile-full
             .panel.has-bg-success.has-text-white
               .media__content
                 h4 Github-REST-API-Example
-                p
+                p(say="home_project_card_5_desc")
                 button.button.is-rounded.is-white
                   span
-                    a(href="https://github.com/Miqueas/Github-REST-API-Example" target="_blank").has-text-black Código fuente
+                    a(href="https://github.com/Miqueas/Github-REST-API-Example" target="_blank" say="home_project_card_link").has-text-black
                   span.icon: i.fas.fa-external-link-alt
 
           .column.is-6.is-mobile-full
             .panel.has-bg-night.has-text-white
               .media__content
                 h4 TermColors
-                p
+                p(say="home_project_card_6_desc")
                 button.button.is-rounded.is-white
                   span
-                    a(href="https://github.com/Miqueas/TermColors" target="_blank").has-text-black Código fuente
+                    a(href="https://github.com/Miqueas/TermColors" target="_blank" say="home_project_card_link").has-text-black
                   span.icon: i.fas.fa-external-link-alt

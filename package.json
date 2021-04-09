@@ -4,7 +4,8 @@
   "description": "My github pages 🤔",
   "main": "index.js",
   "scripts": {
-    "build": "npx pug -o ./ Source/index.pug Source/Home.en.pug Source/Home.es.pug"
+    "build": "npx pug -o ./ Source/index.pug Source/Home.pug Source/Contact.pug",
+    "watch": "npx pug -wo ./ Source/index.pug Source/Home.pug Source/Contact.pug"
   },
   "repository": {
     "type": "git",

@@ -18,13 +18,13 @@ block Sidebar
         .column.grid.has-no-padding-top.has-no-padding-left.has-no-padding-right.is-vertical
           .column.is-full.has-text-center
             h4 Miqueas Martinez
-            small: em Programmer — Designer
+            small: em(say="subtitle")
 
           .column.is-full
             ul.has-no-list-style
-              // li: a(href="/") Home
-              // li.has-text-muted Blog (coming soon)
-              // li: a(href="/contact") Contact
+              li: a(route="home" say="home_link")#home-btn
+              li: a(route="services" say="services_link")#services-btn
+              li: a(route="contact" say="contact_link")#contact-btn
 
       .card__footer.grid
         // Language selection
@@ -36,6 +36,7 @@ block Sidebar
         // Social
         .column.is-full
           ul.is-inline-list
+            li: a(href="https://wa.me/573207359605").fab.fa-whatsapp
             li: a(href="https://t.me/M1que4s").fab.fa-telegram-plane
             li: a(href="https://mas.to/@M1que4s").fab.fa-mastodon
             li: a(href="mailto:miqueas2020@yahoo.com").fas.fa-envelope
