@@ -8,6 +8,11 @@ const EN = {
   // Errors
   load_error_title: "Oh no!",
   load_error_desc: "There was a problem loading the page, try again later.",
+  error_404_title: "You're wrong",
+  error_404_desc: "The page you are requesting does not exist",
+
+  // Spinner
+  spinner_text: "Loading",
 
   // Home page
   home_hello: "Hello",

@@ -1,5 +1,4 @@
 // JS implementation of https://github.com/Olivine-Labs/say
-
 const Say = {
   _lang: "en",
   _reg: {},

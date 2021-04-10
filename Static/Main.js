@@ -1,6 +1,3 @@
-const QueryRE = /((\w+)\=(\w+))+/gi;
-
-const Root = document.getElementById("root");
 var Query;
 
 function GetQuery() {
@@ -10,14 +7,15 @@ function GetQuery() {
   return query;
 }
 
-function Update() {
+async function Update() {
   Query = GetQuery();
+  Router.init();
 
   if (Query["page"] != undefined) {
     let page = Query["page"];
-    Router.render(Root, page);
+    await Router.show(Root, page);
   } else {
-    Router.render(Root, "home");
+    await Router.show(Root, "home");
   }
 
   if (Query["lang"] != undefined) {
@@ -31,6 +29,7 @@ function Update() {
   }
 }
 
+// Trigger on a GET http request
 window.onload = Update;
+// Trigger on window.history.pushState function call
 window.onpopstate = Update;
-// document.onreadystatechange = Update;

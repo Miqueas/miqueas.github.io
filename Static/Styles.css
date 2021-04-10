@@ -39,3 +39,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#Spinner {
+  padding: 14px;
+  width: 0;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 6px solid transparent;
+  border-top-color: #6e45e2;
+  border-radius: 100%;
+  animation: spinner linear 1s infinite;
+}

@@ -2,10 +2,9 @@ block Head
   // Title
   title Miqueas Martinez
 
-  // Meta tags
+  // === SEO ===
   meta(charset="utf-8")
   meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-  // SEO
   meta(name="author" content="Miqueas Martinez")
   meta(name="copyright" content="Miqueas Martinez")
   meta(name="description" content="Programmer — Designer")
@@ -13,10 +12,7 @@ block Head
   meta(name="keywords" content="dev,programmer,developer,programador,desarrollador")
   meta(name="robots" content="index,nofollow")
 
-  // Orbit CSS
-  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orbitcss/css/orbit.min.css")
-  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orbit-tooltips/css/tooltips.min.css")
-
+  // === CSS ===
   // Font Awesome
   link(
     rel="stylesheet"
@@ -25,5 +21,7 @@ block Head
     crossorigin="anonymous"
   )
 
-  // Custom CSS
+  // Custom build of Orbit CSS (orbitcss.com)
+  link(rel="stylesheet" href="Static/orbit.min.css")
+  // My own CSS
   link(rel="stylesheet" href="Static/Styles.css")

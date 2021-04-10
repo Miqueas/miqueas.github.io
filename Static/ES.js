@@ -7,7 +7,12 @@ const ES = {
 
   // Errors
   load_error_title: "¡Oh no!",
-  load_error_desc: "Hubo un problema al cargar la página, inténtalo de nuevo más tarde.",
+  load_error_desc: "Hubo un problema al cargar la página, inténtalo de nuevo más tarde",
+  error_404_title: "Te has equivocado",
+  error_404_desc: "La página que estás solicitando no existe",
+
+  // Spinner
+  spinner_text: "Cargando",
 
   // Home page
   home_hello: "Hola",
