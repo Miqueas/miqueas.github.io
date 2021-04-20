@@ -1,4 +1,48 @@
 block Contact
-  .container
-    h2 Contact me
-    p If you're interested on my services, let me know! You can found me on
+  .hero.is-medium.has-bg-primary.has-text-white
+    .hero__content.grid.is-vertical.is-vertically-centered.has-text-center
+      .column.is-full
+        h2(say="contact_title") Contact me
+
+  .hero
+    .hero__content.grid.has-centered
+      .column.is-10
+        p If you're interested in my services, let me know! You can found me on:
+        p: em Note: please, don't call me, just write.
+
+      .column.is-10.grid
+        .column.is-6.is-mobile-full
+          .panel.has-bg-success.has-text-white
+            .media__content
+              h4 Whatsapp
+              button.button.is-rounded.is-white
+                span
+                  a(href="https://wa.me/573207359605" target="_blank" say="contact_wa_btn").has-text-black
+                span.icon: i.fas.fa-external-link-alt
+
+        .column.is-6.is-mobile-full
+          .panel.has-bg-primary.has-text-white
+            .media__content
+              h4 Telegram
+              button.button.is-rounded.is-white
+                span
+                  a(href="https://t.me/M1que4s" target="_blank" say="contact_tg_btn").has-text-black
+                span.icon: i.fas.fa-external-link-alt
+
+        .column.is-6.is-mobile-full
+          .panel.has-bg-orange3.has-text-white
+            .media__content
+              h4 ForoBeta
+              button.button.is-rounded.is-white
+                span
+                  a(href="https://forobeta.com/members/m1que4sm4rt1nez.196502/" target="_blank" say="contact_forobeta_btn").has-text-black
+                span.icon: i.fas.fa-external-link-alt
+
+        .column.is-6.is-mobile-full
+          .panel.has-bg-black.has-text-white
+            .media__content
+              h4 E-Mail
+              button.button.is-rounded.is-white
+                span
+                  a(href="mailto:miqueas2020@yahoo.com" target="_blank" say="contact_email_btn").has-text-black
+                span.icon: i.fas.fa-external-link-alt

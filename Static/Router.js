@@ -6,11 +6,13 @@ const Routes = {
 
 const Router = {
   init: async function () {
-    let items = document.querySelectorAll("[route]");
+    let items = document.querySelectorAll("a[router]");
 
     for (let item of items) {
-      item.addEventListener("click", function () {
-        let path = this.getAttribute("route");
+      item.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        let path = this.getAttribute("href");
+        Router.show(Root, path);
         Router.go(path);
       });
     }

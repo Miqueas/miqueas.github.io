@@ -19,32 +19,48 @@ async function Update() {
   }
 
   if (Query["lang"] != undefined) {
-    Cookies.set("lang", Query["lang"], { expires: 364 });
+    localStorage.setItem("lang", Query["lang"]);
     Say.load(Query["lang"]);
-  } else if (Cookies.get('lang') != undefined) {
-    Say.load(Cookies.get('lang'));
+  } else if (localStorage.getItem("lang") != null) {
+    Say.load(localStorage.getItem("lang"));
   } else {
-    let lang = Say.load();
-    Cookies.set("lang", lang, { expires: 364 });
+    localStorage.setItem("lang", "en");
+    Say.load();
   }
 }
 
-// Trigger on a GET http request
 window.onload = Update;
-// Trigger on window.history.pushState function call
 window.onpopstate = Update;
 
-const en_btn        = document.getElementById("en-btn");
-const es_btn        = document.getElementById("es-btn");
-const en_btn_mobile = document.getElementById("en-btn-mobile");
-const es_btn_mobile = document.getElementById("es-btn-mobile");
-en_btn.addEventListener("click", () => Say.load("en"));
-es_btn.addEventListener("click", () => Say.load("es"));
-en_btn_mobile.addEventListener("click", () => Say.load("en"));
-es_btn_mobile.addEventListener("click", () => Say.load("es"));
+const mobserv = new MutationObserver(async function () {
+  if (Query["lang"] != undefined) {
+    localStorage.setItem("lang", Query["lang"]);
+    Say.load(Query["lang"]);
+  } else if (localStorage.getItem("lang") != null) {
+    Say.load(localStorage.getItem("lang"));
+  } else {
+    localStorage.setItem("lang", "en");
+    Say.load();
+  }
+});
 
-let mobile_burger = document.getElementById("mobile-burger");
-let mobile_menu = document.getElementById("mobile-menu");
-let mobile_menu_close_btn = document.getElementById("mobile-menu-close-btn");
+mobserv.observe(Root, { attributes: true, childList: true, subtree: true });
+
+document
+  .getElementById("en-btn")
+  .addEventListener("click", () => Say.load("en"));
+document
+  .getElementById("es-btn")
+  .addEventListener("click", () => Say.load("es"));
+document
+  .getElementById("en-btn-mobile")
+  .addEventListener("click", () => Say.load("en"));
+document
+  .getElementById("es-btn-mobile")
+  .addEventListener("click", () => Say.load("es"));
+
+const mobile_burger         = document.getElementById("mobile-burger");
+const mobile_menu           = document.getElementById("mobile-menu");
+const mobile_menu_close_btn = document.getElementById("mobile-menu-close-btn");
 mobile_burger.addEventListener("click", () => mobile_menu.classList.toggle("is-active"));
 mobile_menu_close_btn.addEventListener("click", () => mobile_menu.classList.toggle("is-active"));

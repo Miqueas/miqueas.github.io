@@ -8,7 +8,7 @@ block Sidebar
         .column.is-shrink(style="margin-right: auto; margin-left: auto;")
           .image.is-square.is-rounded
             img(
-              src="Static/Brand.png"
+              src="Static/Brand.jpg"
               width="100%"
               height="100%"
               style="border-radius: 50%;"
@@ -22,9 +22,9 @@ block Sidebar
 
           .column.is-full
             ul.has-no-list-style
-              li: a(href="#" route="home" say="home_link")#home-btn
-              li: a(href="#" route="services" say="services_link")#services-btn
-              li: a(href="#" route="contact" say="contact_link")#contact-btn
+              li: a(href="home"     router say="home_link")#home-btn
+              li: a(href="services" router say="services_link")#services-btn
+              li: a(href="contact"  router say="contact_link")#contact-btn
 
       .card__footer.grid
         // Language selection
@@ -38,9 +38,13 @@ block Sidebar
           ul.is-inline-list
             li: a(href="https://wa.me/573207359605").fab.fa-whatsapp
             li: a(href="https://t.me/M1que4s").fab.fa-telegram-plane
-            li: a(href="https://mas.to/@M1que4s").fab.fa-mastodon
+            li: a(href="https://forobeta.com/members/m1que4sm4rt1nez.196502/").fas.fa-comment-alt
+            // li: a(href="https://mas.to/@M1que4s").fab.fa-mastodon
             li: a(href="mailto:miqueas2020@yahoo.com").fas.fa-envelope
 
         // Copyright
-        .column.is-full.has-no-padding-top
-          small &copy; 2021 Miqueas Martinez
+        .grid.column.is-full.has-no-padding-top
+          small.column.is-full.has-no-padding-top.has-no-padding-left.has-no-padding-right.
+            &copy; 2021 Miqueas Martinez
+          small.column.is-full.has-no-padding.
+            This website is built with <a href="https://orbitcss.com" target="_blank" rel="nofollow" rel="noreferrer">Orbit</a> and lots of spaguetti code
