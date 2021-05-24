@@ -31,19 +31,19 @@ async function Update() {
 window.onload = Update;
 window.onpopstate = Update;
 
-const mobserv = new MutationObserver(async function () {
-  if (Query["lang"] != undefined) {
-    localStorage.setItem("lang", Query["lang"]);
-    Say.load(Query["lang"]);
-  } else if (localStorage.getItem("lang") != null) {
-    Say.load(localStorage.getItem("lang"));
-  } else {
-    localStorage.setItem("lang", "en");
-    Say.load();
-  }
-});
+// const mobserv = new MutationObserver(async function () {
+//   if (Query["lang"] != undefined) {
+//     localStorage.setItem("lang", Query["lang"]);
+//     Say.load(Query["lang"]);
+//   } else if (localStorage.getItem("lang") != null) {
+//     Say.load(localStorage.getItem("lang"));
+//   } else {
+//     localStorage.setItem("lang", "en");
+//     Say.load();
+//   }
+// });
 
-mobserv.observe(Root, { attributes: true, childList: true, subtree: true });
+// mobserv.observe(Root, { attributes: true, childList: true, subtree: true });
 
 document
   .getElementById("en-btn")

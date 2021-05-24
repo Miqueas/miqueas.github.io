@@ -47,5 +47,7 @@ const Router = {
       console.log(e);
       root.innerHTML = ErrView;
     }
+
+    Say.load();
   }
 }

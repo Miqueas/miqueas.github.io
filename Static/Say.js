@@ -6,6 +6,7 @@ const Say = {
   load: function (lang) {
     if (lang == undefined || lang == null) {
       lang = document.documentElement.getAttribute("lang");
+      if (lang == null) lang = localStorage.getItem("lang");
       if (lang == null) lang = this._lang;
     }
 
