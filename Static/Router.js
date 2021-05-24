@@ -46,8 +46,8 @@ const Router = {
     } catch (e) {
       console.log(e);
       root.innerHTML = ErrView;
+    } finally {
+      Say.load();
     }
-
-    Say.load();
   }
 }
