@@ -12,8 +12,7 @@ async function Update() {
   Router.init();
 
   if (Query["page"] != undefined) {
-    let page = Query["page"];
-    await Router.show(Root, page);
+    await Router.show(Root, Query["page"]);
   } else {
     await Router.show(Root, "home");
   }

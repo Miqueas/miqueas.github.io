@@ -19,7 +19,7 @@ const Say = {
           (this._reg[lang] != undefined || this._reg[lang] != null) &&
           (this._reg[lang][id] != undefined || this._reg[lang][id] != null)
         ) {
-          item.textContent = this._reg[lang][id];
+          item.innerHTML = this._reg[lang][id];
         }
       }
     }

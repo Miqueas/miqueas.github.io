@@ -4,6 +4,7 @@ const EN = {
   home_link: "Home",
   services_link: "Services",
   contact_link: "Contact",
+  sidebar_footer: "This website is built with <a href='https://orbitcss.com' target='_blank' rel='nofollow' rel='noreferrer'>Orbit</a> and lots of spaguetti code",
 
   // Errors
   load_error_title: "Oh no!",
