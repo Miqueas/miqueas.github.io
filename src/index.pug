@@ -1,0 +1,30 @@
+doctype html
+
+html(lang="en")
+  head
+    include common/head
+
+  body.bg-dark.text-light
+    main#root.container-xl
+      .d-flex.flex-column.align-items-start(style="min-height: 100vh;")
+        .my-auto.container-fluid: .row.row-md.gap-4.gap-md-0.align-items-center
+          .col-md-9.text-center
+            h1 Miqueas Martinez
+            p: em Open Source Developer
+            ul.list-unstyled.list-inline
+              li.list-inline-item: a(href="https://github.com/Miqueas").link-light: i(style="font-size: 24px;").bi.bi-github
+              li.list-inline-item: a(href="https://t.me/M1que4s").link-light: i(style="font-size: 24px;").bi.bi-telegram
+              li.list-inline-item: a(href="https://mas.to/@M1que4s").link-light: i(style="font-size: 24px;").bi.bi-mastodon
+              li.list-inline-item: a(href="https://twitter.com/M1que4s").link-light: i(style="font-size: 24px;").bi.bi-twitter
+              li.list-inline-item: a(href="mailto:miqueas2020@yahoo.com").link-light: i(style="font-size: 24px;").bi.bi-envelope-fill
+          .col-md.text-center.text-md-start
+            ul.nav.flex-column
+              li.nav-item: a(href="/projects.html").nav-link.link-light.disabled Projects
+              li.nav-item: a(href="/blog.html").nav-link.link-light.disabled Blog
+              li.nav-item: a(href="/about.html").nav-link.link-light.disabled About me
+              li.nav-item: a(href="/contact.html").nav-link.link-light.disabled Contact
+        footer#footer.container-fluid.text-center
+          p.mb-0: small Made with <i class="bi bi-heart-fill"></i> in Colombia.
+          p: small Copyright &copy; 2021 Miqueas Martinez
+
+    include common/scripts

@@ -1,0 +1,20 @@
+block navbar
+  // Navigation bar
+  nav.navbar.navbar-expand-sm.navbar-dark
+    .container-xl
+      // Brand
+      a(href="/").navbar-brand.mb-0.h1 Miqueas Martinez
+      // Menu button
+      button(
+        data-bs-toggle="collapse"
+        data-bs-target="#navlinks"
+        aria-controls="#navlinks"
+        aria-expanded="false"
+      ).navbar-toggler
+        i.bi.bi-three-dots
+      // Navigation links
+      #navlinks.navbar-collapse.collapse
+        ul.navbar-nav
+          li.nav-item: a(href="/projects").nav-link Projects
+          li.nav-item: a(href="/contact").nav-link Contact
+          li.nav-item: a(href="/blog").nav-link Blog
