@@ -1,7 +1,7 @@
 {
   "name": "miqueas.github.io",
   "version": "0.1.0",
-  "description": "My github pages 🤔",
+  "description": "My personal website",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -12,5 +12,8 @@
   "bugs": {
     "url": "https://github.com/Miqueas/Miqueas.github.io/issues"
   },
-  "homepage": "https://github.com/Miqueas/Miqueas.github.io#readme"
+  "homepage": "https://github.com/Miqueas/Miqueas.github.io#readme",
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
 }
