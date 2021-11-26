@@ -1,6 +1,6 @@
-- [ ] Improve english translation
-- [ ] Add the "Services" page
-- [x] Yes
-- [ ] Blog
-- [ ] Add a contact page (or just a section)
-- [X] Improve translations in tablets and mobile devices
+ - Add "Contact" page
+ - Add "Projects" page
+ - Blog
+ - Add "About me" page
+ - Translations
+ - Deploy action

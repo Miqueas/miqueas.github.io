@@ -1,12 +1,8 @@
 {
-  "name": "Miqueas.github.io",
+  "name": "miqueas.github.io",
   "version": "0.1.0",
   "description": "My github pages 🤔",
   "main": "index.js",
-  "scripts": {
-    "build": "npx pug -o ./ Source/index.pug Source/Home.pug Source/Contact.pug",
-    "watch": "npx pug -wo ./ Source/index.pug Source/Home.pug Source/Contact.pug"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Miqueas/Miqueas.github.io.git"
@@ -16,9 +12,5 @@
   "bugs": {
     "url": "https://github.com/Miqueas/Miqueas.github.io/issues"
   },
-  "homepage": "https://github.com/Miqueas/Miqueas.github.io#readme",
-  "dependencies": {
-    "pug": "^2.0.4",
-    "pug-cli": "^1.0.0-alpha6"
-  }
+  "homepage": "https://github.com/Miqueas/Miqueas.github.io#readme"
 }
