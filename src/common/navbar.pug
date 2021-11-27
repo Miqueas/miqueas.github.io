@@ -15,6 +15,49 @@ block navbar
       // Navigation links
       #navlinks.navbar-collapse.collapse
         ul.navbar-nav
-          li.nav-item: a(href="/projects").nav-link Projects
-          li.nav-item: a(href="/contact").nav-link Contact
-          li.nav-item: a(href="/blog").nav-link Blog
+          li.nav-item
+            if page == "projects"
+              a(href="/projects.html" aria-current="page").nav-link.active
+                | <span class="bi bi-briefcase-fill"></span>&nbsp;
+                | Projects
+            else
+              a(href="/projects.html").nav-link
+                | <span class="bi bi-briefcase-fill"></span>&nbsp;
+                | Projects
+
+          li.nav-item
+            if page == "blog"
+              a(href="/blog.html" aria-current="page").nav-link.active
+                | <span class="bi bi-journal-bookmark-fill"></span>&nbsp;
+                | Blog
+            else
+              a(href="/blog.html").nav-link
+                | <span class="bi bi-journal-bookmark-fill"></span>&nbsp;
+                | Blog
+
+          li.nav-item
+            if page == "about"
+              a(href="/about.html" aria-current="page").nav-link.active
+                | <span class="bi bi-file-person-fill"></span>&nbsp;
+                | About me
+            else
+              a(href="/about.html").nav-link
+                | <span class="bi bi-file-person-fill"></span>&nbsp;
+                | About me
+
+          li.nav-item
+            if page == "contact"
+              a(href="/contact.html" aria-current="page").nav-link.active
+                | <span class="bi bi-person-plus-fill"></span>&nbsp;
+                | Contact
+            else
+              a(href="/contact.html").nav-link
+                | <span class="bi bi-person-plus-fill"></span>&nbsp;
+                | Contact
+          
+        ul.m-0.ms-auto.list-unstyled.list-inline
+          li.list-inline-item: a(target="_blank" rel="nofollow" href="https://github.com/Miqueas").link-light: i(style="font-size: 18px;").bi.bi-github
+          li.list-inline-item: a(target="_blank" rel="nofollow" href="https://t.me/M1que4s").link-light: i(style="font-size: 18px;").bi.bi-telegram
+          li.list-inline-item: a(target="_blank" rel="nofollow" href="https://mas.to/@M1que4s").link-light: i(style="font-size: 18px;").bi.bi-mastodon
+          li.list-inline-item: a(target="_blank" rel="nofollow" href="https://twitter.com/M1que4s").link-light: i(style="font-size: 18px;").bi.bi-twitter
+          li.list-inline-item: a(target="_blank" rel="nofollow" href="mailto:miqueas2020@yahoo.com").link-light: i(style="font-size: 18px;").bi.bi-envelope-fill
