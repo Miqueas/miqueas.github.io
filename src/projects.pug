@@ -1,1 +1,90 @@
-block projects
+doctype html
+
+html(lang="en")
+  head
+    include common/head
+
+  body.bg-dark.text-light
+    include common/navbar
+
+    main#root.container-xl
+      header.p-5
+        h1 Projects
+        p Learn a bit about what I've done and/or what I'm working on.
+      
+      br
+
+      .row.mb-4.align-items-center
+        .col.text-center
+          h2 Tape Deck
+          ul.list-unstyled
+            li.mb-2: em Language: <strong class="text-pink">Vala</strong>
+            li.mb-2: em Status: <strong class="text-danger">WIP</strong>
+            li: a(href="https://github.com/Miqueas/TapeDeck" target="_blank").btn.btn-light
+              | Repository&nbsp;
+              | <i class="bi bi-box-arrow-up-right"></i>
+        .col: p
+          | A music player written in Vala, using GTK 4, libadwaita and GStreamer.
+          | Planned to be cross-platform and to has MPD support.
+          | Originally written in Lua, Tape Deck is one of my most old projects and
+          | was changed a lot since I started working on it and there's still a lot
+          | of work to do.
+      
+      .row.mb-4.align-items-center
+        .col.text-end: p
+          | Yet another OOP library for Lua. This is my first public repository on Github
+          | and the first project that I have started working on. Originally, it was just
+          | an small library for creating and using "stacks" (data structure) and then idk
+          | how but I just started making an OOP library.
+
+        .col.text-center
+          h2 Self
+          ul.list-unstyled
+            li.mb-2: em Language: Lua
+            li.mb-2: em Status: <strong class="text-success">Released</strong>
+            li: a(href="https://github.com/Miqueas/Self" target="_blank").btn.btn-light
+              | Repository&nbsp;
+              | <i class="bi bi-box-arrow-up-right"></i>
+      
+      .row.mb-4.align-items-center
+        .col.text-center
+          h2 Logit
+          ul.list-unstyled
+            li.mb-2: em Language: Lua
+            li.mb-2: em Status: <strong class="text-success">Released</strong>
+            li: a(href="https://github.com/Miqueas/Logit" target="_blank").btn.btn-light
+              | Repository&nbsp;
+              | <i class="bi bi-box-arrow-up-right"></i>
+
+        .col: p
+          | Dependencies free, tiny and simple logging library for Lua. This is another "old"
+          | project, I don't remember too much about this one, but is one of my favorite
+          | projects and it was fun when I was worked on it.
+      
+      .row.mb-4.align-items-center
+        .col.text-end: p
+          | There's a more recent work. And, in this case, this "project" is more like a "learning
+          | place". I use it when I'm interested on learning an specific language, when I feel that
+          | I've learned the basics and more, then I write the same command line application in the
+          | language I learned. For other users, it works has a basic example of how to use the
+          | Github REST API.
+
+        .col.text-center
+          h2 Github REST API Examples
+          ul.list-unstyled
+            li.mb-2: em Language: Nim, Lua and many others
+            li.mb-2: em Status: <strong class="text-success">Released</strong>
+            li: a(href="https://github.com/Miqueas/Self" target="_blank").btn.btn-light
+              | Repository&nbsp;
+              | <i class="bi bi-box-arrow-up-right"></i>
+
+      section.p-5
+        h3 But there's more!
+        p
+          | Check out my
+          | <a class="link-light" target="_blank" rel="nofollow" href="https://github.com/Miqueas">Github profile</a>
+          | to see my other reporitories.
+
+      include common/footer
+
+    include common/scripts
