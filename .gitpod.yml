@@ -3,6 +3,7 @@ image: gitpod/workspace-base
 tasks:
   - name: Setup Node
     command: |
+      sudo apt update; sudo apt upgrade -y
       curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
       sudo apt install -y nodejs
 
