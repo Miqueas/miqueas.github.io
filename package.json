@@ -1,18 +1,19 @@
 {
   "name": "miqueas.github.io",
   "version": "0.1.0",
+  "author": "Miqueas Martinez",
   "description": "My personal website",
-  "main": "index.js",
+  "homepage": "https://github.com/Miqueas/Miqueas.github.io#readme",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Miqueas/Miqueas.github.io.git"
   },
-  "author": "Miqueas Martinez",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Miqueas/Miqueas.github.io/issues"
+  "bugs": { "url": "https://github.com/Miqueas/Miqueas.github.io/issues" },
+  "scripts": {
+    "watch": "yarn pug -wo www/ src/index.pug src/projects.pug",
+    "local": "yarn http-server www/"
   },
-  "homepage": "https://github.com/Miqueas/Miqueas.github.io#readme",
   "devDependencies": {
     "pug-cli": "^1.0.0-alpha6",
     "http-server": "^14.1.0"
