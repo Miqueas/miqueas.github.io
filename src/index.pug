@@ -1,36 +1,47 @@
 doctype html
 
 html(lang="en")
-  head
-    include common/head
+  head: include common/head
 
   body.bg-dark.text-light
-    main#root.container-xl
-      .d-flex.flex-column.align-items-start(style="min-height: 100vh;")
-        .my-auto.container-fluid: .row.row-md.gap-4.gap-md-0.align-items-center
-          .col-md-9.text-center
-            h1 Miqueas Martinez
-            p: em Open Source Developer
-            ul.list-unstyled.list-inline
-              li.list-inline-item: a(target="_blank" rel="nofollow" href="https://github.com/Miqueas").link-light: i(style="font-size: 24px;").bi.bi-github
-              li.list-inline-item: a(target="_blank" rel="nofollow" href="https://t.me/M1que4s").link-light: i(style="font-size: 24px;").bi.bi-telegram
-              li.list-inline-item: a(target="_blank" rel="nofollow" href="https://mas.to/@M1que4s").link-light: i(style="font-size: 24px;").bi.bi-mastodon
-              li.list-inline-item: a(target="_blank" rel="nofollow" href="https://twitter.com/M1que4s").link-light: i(style="font-size: 24px;").bi.bi-twitter
-              li.list-inline-item: a(target="_blank" rel="nofollow" href="mailto:miqueas2020@yahoo.com").link-light: i(style="font-size: 24px;").bi.bi-envelope-fill
-          .col-md.text-center.text-md-start
-            ul.nav.flex-column
-              li.nav-item: a(href="/projects.html").nav-link.link-light
-                | <span class="bi bi-briefcase-fill"></span>&nbsp;
-                | Projects
-              li.nav-item: a(href="/blog.html").nav-link.link-light.disabled
-                | <span class="bi bi-journal-bookmark-fill"></span>&nbsp;
-                | Blog
-              li.nav-item: a(href="/about.html").nav-link.link-light.disabled
-                | <span class="bi bi-question-circle-fill"></span>&nbsp;
-                | About me
-              li.nav-item: a(href="/contact.html").nav-link.link-light.disabled
-                | <span class="bi bi-person-plus-fill"></span>&nbsp;
-                | Contact
-        include common/footer
+    header.container-fluid.p-4.text-center
+      include common/header
 
+      //- Navigation
+      nav(aria-label="breadcrumb")
+        ol.breadcrumb.justify-content-center
+          li(aria-current="page").breadcrumb-item.active Home
+
+    main#root.container
+      #about.row: section.mb-4
+        h2 Hello!
+        p
+          | I'm a 21yo venezuelan developer, living in Colombia, Linux user, GTK fan and Lua lover.
+          | As expected, I mainly code in Lua, but in C too and I know to code in Go, Nim and many
+          | others languages. Check out my
+          | <a class="link-light" target="_blank" rel="nofollow" href="https://github.com/Miqueas">Github profile</a>
+          | to see all my projects.
+
+      #projects.row: section.mb-4
+        h2 Projects
+        p
+          | See what I'm working on or what I've done. You can also see my
+          | <a class="link-light" target="_blank" rel="nofollow" href="https://gist.github.com/Miqueas">Gists</a>.
+        
+        //- Projects cards
+        //- Use include to prevent writing a lot of Pug code here
+        include projects
+
+      #contact.row: section.mb-4
+        h2 Contact/Social
+        p If you need to tell me something, you can found me in the following places:
+        ul
+          li
+            a(target="_blank" rel="nofollow" href="https://t.me/M1que4s").link-light Telegram
+            span &nbsp;(I'm more active here)
+          li: a(target="_blank" rel="nofollow" href="https://mas.to/@M1que4s").link-light Mastodon
+          li: a(target="_blank" rel="nofollow" href="https://twitter.com/M1que4s").link-light Twitter
+          li: a(target="_blank" rel="nofollow" href="mailto:miqueas2020@yahoo.com").link-light Email
+
+    include common/footer
     include common/scripts
