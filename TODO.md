@@ -1,6 +1,0 @@
- - Add "Contact" page
- - Add "Projects" page
- - Blog
- - Add "About me" page
- - Translations
- - Deploy action
