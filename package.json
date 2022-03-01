@@ -11,7 +11,7 @@
   },
   "bugs": { "url": "https://github.com/Miqueas/Miqueas.github.io/issues" },
   "scripts": {
-    "watch": "yarn pug -wo www/ src/index.pug src/projects.pug",
+    "watch": "yarn pug -wo www/ src/index.pug",
     "local": "yarn http-server www/"
   },
   "devDependencies": {
