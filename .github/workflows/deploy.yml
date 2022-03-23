@@ -1,9 +1,6 @@
-name: Deploy
+name: Deploy website
 
-on:
-  push:
-    branches:
-      - master
+on: [ push ]
 
 jobs:
   deploy:
@@ -20,7 +17,7 @@ jobs:
       - name: Build
         run: |
           npm install
-          npx pug -o www src/index.pug
+          npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.6
