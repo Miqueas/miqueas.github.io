@@ -4,7 +4,7 @@ import type { DefaultThemeOptions } from 'vuepress'
 export default defineUserConfig<DefaultThemeOptions>({
   title: "Miqueas Martinez",
   dest: "www",
-  //public: "pub",
+  public: "pub",
 
   themeConfig: {
     navbar: [
