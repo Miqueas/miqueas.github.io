@@ -2,20 +2,13 @@
   "name": "miqueas.github.io",
   "version": "0.1.0",
   "description": "My website",
+  "private": true,
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Miqueas/Miqueas.github.io.git"
-  },
   "author": "Miqueas Martinez",
   "license": "Zlib",
-  "bugs": {
-    "url": "https://github.com/Miqueas/Miqueas.github.io/issues"
-  },
-  "homepage": "https://github.com/Miqueas/Miqueas.github.io#readme",
   "devDependencies": {
     "vuepress": "^2.0.0-beta.36"
   }
