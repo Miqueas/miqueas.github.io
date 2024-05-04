@@ -3,7 +3,7 @@ name: Deploy website
 on: [push]
 
 jobs:
-  deploy:
+  Deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Setup repo
