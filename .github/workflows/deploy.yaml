@@ -22,4 +22,4 @@ jobs:
       - name: Deploy website
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
+          folder: _BUILD
