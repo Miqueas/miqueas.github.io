@@ -1,4 +1,5 @@
 {
+  "main": "./src/App.tsx",
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "target": "ES2020",
