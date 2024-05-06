@@ -1,0 +1,27 @@
+:root {
+  font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.2;
+
+  color-scheme: dark;
+  color: #fafafa;
+  background-color: #16161b;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+img { max-width: 100%; }
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+}

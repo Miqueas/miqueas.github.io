@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App.tsx'
-import './index.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './Home'
 
 const root = document.getElementById('root')
 
@@ -10,10 +9,14 @@ if (root) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/docs"/>
+          <Route path="/blog"/>
+        </Routes>
       </BrowserRouter>
     </React.StrictMode>
   )
 } else {
-  console.error('Root element not found')
+  throw new Error('No root element found')
 }
